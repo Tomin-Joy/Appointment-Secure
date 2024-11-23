@@ -1,10 +1,10 @@
 package com.ust.appointment.service;
 
-import com.ust.appointment.common.UserRoleInfo;
-import com.ust.appointment.model.UserInfo;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import com.ust.appointment.model.UserInfo;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -22,7 +22,6 @@ public class GroupUserDetails implements UserDetails {
         this.password = userInfo.getPassword();
         this.roles = Arrays.stream(userInfo.getRoles().split(",")).map(SimpleGrantedAuthority::new).collect(Collectors.toList());
     }
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return roles;

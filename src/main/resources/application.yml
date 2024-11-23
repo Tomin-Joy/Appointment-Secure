@@ -1,13 +1,13 @@
 
 server:
-  port: 9101
+  port: 3000
 spring:
   application:
     name: appointmentservice
   datasource:
     url: jdbc:mysql://localhost:3306/dental
     username: root
-    password: password
+    password: root@123
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:

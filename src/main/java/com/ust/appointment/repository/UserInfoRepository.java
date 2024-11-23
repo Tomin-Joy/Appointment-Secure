@@ -1,9 +1,10 @@
 package com.ust.appointment.repository;
 
-import com.ust.appointment.model.UserInfo;
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
+import com.ust.appointment.model.UserInfo;
 
 
 public interface UserInfoRepository extends JpaRepository<UserInfo,Long> {
